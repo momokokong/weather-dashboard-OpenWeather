@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Weather Dashboard by OpenWeather API</title>
 </head>
 
 <body class="h-screen">
-  <header class="h-14 bg-emerald-300 py-2 grid grid-cols-4">
-    <h1 class="text-3xl font-bold underline text-red-600 col-start-3">
+  <header class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500 py-2 grid grid-cols-4">
+    <h1 class="text-3xl font-bold text-orange-300 col-start-3">
       Weather Dashboard
     </h1>
   </header>
@@ -21,61 +20,26 @@
           <label for="search-city-name">Search for a city:</label>
           <input type="text" class="block my-3 pl-2 w-full border border-slate-400 text-gray-900 placeholder:text-gray-400  focus:ring-0" pattern="[A-Za-z]*" placeholder="Boston" id="search-city-name" name="search-city-name">
           <small id="reminder" class="underline text-red-500 text-center border-dashed border-yellow-600 block"></small>
-          <button type="button" class="w-full my-3 focus:ring-0 bg-violet-100 rounded-full border-1" id="search-city">Search</button>
+          <button type="button" class="w-full my-3 hover:ring-4 hover:ring-gray-800 bg-violet-100 rounded-full border-1" id="search-city">Search</button>
 
       </form>
       <nav class="h-4/5 m-2 p-3" id="nav-cities">
-        Buttons
-        button data-lat and data-lon
       </nav>
     </aside>
     <section class="m-2 col-span-3 col-start-2 grid grid-row-4">
-        <article class="border m-3 mr-20" id="weather-today">
-          <h2>City name + Date + Weather emoji</h2>
-          <p>Temp:</p>
-          <p>Wind:</p>
-          <p>Humidity:</p>
+        <article class="row-span-1 border m-3 mr-20 border-gray-800" id="weather-today">
         </article>
-        <section class="row-span-3 m-3 mr-20 border list-none grid grid-cols-5 gap-4" id="weather-5days">
-          <Summary>
-            <h2>City name + Datedsada</h2>
-            <p>Weather emoji</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </Summary>
-          <Summary>
-            <h2>City name + Date</h2>
-            <p>Weather emoji</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </Summary>
-          <Summary>
-            <h2>City name + Date</h2>
-            <p>Weather emoji</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </Summary>
-          <Summary>
-            <h2>City name + Date</h2>
-            <p>Weather emoji</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </Summary>
-          <Summary>
-            <h2>City name + Date</h2>
-            <p>Weather emoji</p>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-          </Summary>
+        <section class="row-span-2 m-3 mr-20 list-none"> 
+          <h3 class="text-2xl font-bold">5 Days Forecast:</h3>
+          <div class="grid grid-cols-5 gap-2" id="weather-5days">
+          </div>
         </section>
+        <div class="row-span-1"></div>
     </section>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <script src="./assets/js/weather.js"></script>
 </body>
 
