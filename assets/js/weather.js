@@ -1,3 +1,11 @@
+// weather.js is the only js as the main to initialize/handle localstorage data, add a button per submit, sort the city buttons, 
+// and show weather forcasts.  If the APIs or invalid input, it will throw a message above the search button.
+
+// Global variables:
+// searchButtonEl, navEl, reminderEl, todayEl, fiveDaysEl, cityInputEl - references of html elements shared across functions 
+// emptyInputReminder, geoFailedReminder, invalidNameReminder, weatherFailedReminder, invalidGeoReminder - error messages for error handling
+// cityButtons - an array holds the searched cities.  10 items max. 
+
 const searchButtonEl = document.querySelector("#search-city");
 const navEl = document.querySelector("#nav-cities");
 const reminderEl = document.querySelector("#reminder");
@@ -19,8 +27,6 @@ function checkCity() {
     return;
   } 
   convertCityToCoordinate(cityInput);
-
-
   cityInputEl.value = "";
 }
 
