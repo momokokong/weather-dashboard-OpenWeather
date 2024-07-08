@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+  <title>Weather Dashboard by OpenWeather API</title>
+</head>
+
+<body class="h-screen">
+  <header class="bg-emerald-300 py-2 grid grid-cols-4">
+    <h1 class="text-3xl font-bold underline text-red-600 col-start-3">
+      Weather Dashboard
+    </h1>
+  </header>
+  <main class="h-11/12 grid grid-cols-4 gap-3">
+    <aside class="m-2">
+      <form id="search-form" class="h-1/5 p-3 h-fit border-b-slate-400 border-solid border place-content-center">
+          <label for="search-city-name">Search for a city:</label>
+          <input type="text" class="block my-3 pl-2 w-full border border-slate-400 text-gray-900 placeholder:text-gray-400  focus:ring-0" placeholder="Boston" id="search-city-name" name="search-city-name">
+          <button type="button" class="w-full my-3 focus:ring-0 bg-violet-100 rounded-full border-1" id="search-city">Search</button>
+
+      </form>
+      <nav class="h-3/5 m-2 p-3">
+        Buttons
+        button data-lat and data-lon
+      </nav>
+    </aside>
+    <section class="m-2 col-span-3 col-start-2 grid grid-row-4">
+        <article class="border m-3 mr-20 ">
+          <h2>City name + Date + Weather emoji</h2>
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+        </article>
+        <section class="row-span-3 m-3 mr-20 border list-none grid grid-cols-5">
+          <Summary>
+            <h2>City name + Date</h2>
+            <p>Weather emoji</p>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
+          </Summary>
+          <Summary>
+            <h2>City name + Date</h2>
+            <p>Weather emoji</p>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
+          </Summary>
+          <Summary>
+            <h2>City name + Date</h2>
+            <p>Weather emoji</p>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
+          </Summary>
+          <Summary>
+            <h2>City name + Date</h2>
+            <p>Weather emoji</p>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
+          </Summary>
+          <Summary>
+            <h2>City name + Date</h2>
+            <p>Weather emoji</p>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
+          </Summary>
+        </section>
+    </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <script src="./assets/js/weather.js"></script>
+</body>
+
+</html>
