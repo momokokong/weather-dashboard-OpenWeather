@@ -48,7 +48,7 @@ function addCityButton(city) {
 }
 
 function convertCityToCoordinate(cityName) {
-  let geoURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=1b40ae1a60514ea8a70f1b260e3d46bb&limit=1";
+  let geoURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=1b40ae1a60514ea8a70f1b260e3d46bb&limit=1";
   fetch(geoURL).then(function (response) {
     if (response.status = 200) {
       return response.json();
