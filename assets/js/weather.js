@@ -27,6 +27,7 @@ let cityButtons = JSON.parse(localStorage.getItem("cities"));
 // Initiate cityButtons as an empty array if it is null.  Render the buttons if cityButtons contains something. Add click and enter listeners
 // to the respective elements.
 function init() {
+  wipeDashboard();
   if (cityButtons === null){
     localStorage.setItem("cities",JSON.stringify([]));
     cityButtons = JSON.parse(localStorage.getItem("cities"));
